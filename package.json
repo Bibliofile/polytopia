@@ -4,7 +4,6 @@
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
-    "gh-pages": "^2.0.1",
     "ts-loader": "^5.3.3",
     "tslint": "^5.12.0",
     "tslint-config-standard": "^8.0.1",
@@ -13,7 +12,7 @@
     "webpack-cli": "^3.2.0"
   },
   "scripts": {
-    "site": "yarn build && gh-pages -d build",
+    "site": "yarn build && git subtree push --prefix build origin gh-pages",
     "build": "webpack -c webpack.config.js"
   }
 }
