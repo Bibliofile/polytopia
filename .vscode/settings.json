@@ -1,0 +1,6 @@
+{
+    "javascript.preferences.quoteStyle": "single",
+    "typescript.preferences.quoteStyle": "single",
+    "editor.tabSize": 2,
+    "editor.detectIndentation": false
+}

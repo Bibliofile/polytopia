@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>Polytopia Battle Calculator</title>
+</head>
+<body>
+
+<main>
+  <section class="left">
+    <canvas></canvas>
+  </section>
+  <section class="right">
+    <h3 data-for="tileTitle">Tile</h3>
+    <select data-for="tile"></select>
+    <h3>
+      Unit
+      &ndash;
+      <label>Vet<input type="checkbox" title="Veteran" data-for="veteran"></label>
+      <label>P1<input type="checkbox" title="Owned by player 1" data-for="player"></label>
+    </h3>
+    <select data-for="unitAllowed"></select>
+    <section data-for="carrying">
+      <h4>Carrying</h4>
+      <select data-for="unitCarry"></select>
+    </section>
+    <h4>Health</h4>
+    <input type="number" data-for="health" value="10" min="1">
+
+    <h4>Players</h4>
+    <section class="player" data-for="player1">
+      <label><input type="checkbox" data-for="archery"> Archery</label>
+      <label><input type="checkbox" data-for="aquatism"> Aquatism</label>
+      <label><input type="checkbox" data-for="meditation"> Meditation</label>
+    </section>
+    <section class="player" data-for="player2">
+      <label><input type="checkbox" data-for="archery"> Archery</label>
+      <label><input type="checkbox" data-for="aquatism"> Aquatism</label>
+      <label><input type="checkbox" data-for="meditation"> Meditation</label>
+    </section>
+
+    <h4>Actions</h4>
+    <button data-for="copyTiles">Copy Tile Map</button>
+    <button data-for="copyUnits">Copy Unit Map</button>
+    <button data-for="clearState">Clear State</button>
+
+    <h4>Info</h4>
+    <ul>
+      <li>Drag a tile with a unit to attack / move</li>
+      <li>No turn / movement restrictions</li>
+      <li>This tool assumes that if a unit is in a city, the city is owned by that unit</li>
+      <li>Mobile devices not supported</li>
+      <li>Import tile maps through the JS console</li>
+      <li>Prior art: <a href="https://frothfrenzy.github.io/polytopiacalculator/">FrothFrenzy's Battle Calculator</a></li>
+      <li><a href="https://github.com/Bibliofile/polytopia">Open Source (MIT)</a></li>
+    </ul>
+  </section>
+</main>
+
+<script src="bundle.js"></script>
+
+</body>
+</html>

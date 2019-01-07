@@ -1,0 +1,36 @@
+body {
+  background: #1E1E1E;
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+}
+
+canvas {
+  display: block;
+  position: relative;
+  top: 2.5vh;
+  margin: auto;
+  width: 95vh;
+  height: 95vh;
+}
+
+.player {
+  display: inline-block;
+  width: 45%;
+  border: 1px solid;
+}
+.player[data-for=player1] {
+  border-color: #ff0000;
+}
+.player[data-for=player2] {
+  border-color: #ffee00;
+}
+
+.player label {
+  display: block;
+}
