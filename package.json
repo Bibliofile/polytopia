@@ -13,7 +13,7 @@
     "webpack-cli": "^3.2.0"
   },
   "scripts": {
-    "site": "yarn build && node scripts/update-site",
+    "site": "yarn build && gh-pages -d build",
     "build": "webpack -c webpack.config.js"
   }
 }
