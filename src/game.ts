@@ -1,6 +1,6 @@
 import { Map, SquareFlags, Square } from './map'
 import { Player } from './player'
-import { Unit, UnitType, waterUnits } from './unit'
+import { Unit, UnitType, waterUnits, rangedUnits } from './unit'
 
 export class Game {
   static readonly ACCELERATOR = 4.5
@@ -66,6 +66,7 @@ export class Game {
 
   private moveUnit (from: Square, to: Square) {
     if (!from.unit) return
+    if (rangedUnits.includes(from.unit.type)) return
 
     if (!from.isLand && to.isLand) {
       to.unit = from.unit.carrying || from.unit
