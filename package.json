@@ -12,7 +12,8 @@
     "webpack-cli": "^3.2.0"
   },
   "scripts": {
-    "site": "yarn build && git subtree push --prefix build origin gh-pages",
+    "update-site": "yarn build && yarn push-site",
+    "push-site": "git subtree push --prefix build origin gh-pages",
     "build": "webpack -c webpack.config.js"
   }
 }
